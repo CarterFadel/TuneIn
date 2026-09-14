@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site_title }}</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #0b0f19;
+      color: #f8fafc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      padding: 40px;
+      border-radius: 16px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 2rem;
+      color: #38bdf8;
+    }
+    p {
+      color: #94a3b8;
+      line-height: 1.6;
+      font-size: 1.05rem;
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: #0284c7;
+      color: white;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      text-align: left;
+    }
+    li {
+      background: #0f172a;
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      border: 1px solid #1e293b;
+      color: #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <span class="badge">{{ status }}</span>
+    <h1>{{ heading }}</h1>
+    <p>{{ description }}</p>
+
+    <!-- This list is passed dynamically straight from Python -->
+    <ul>
+      {% for item in highlights %}
+        <li>⚡ {{ item }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+</body>
+</html>
