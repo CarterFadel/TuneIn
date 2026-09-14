@@ -7,10 +7,10 @@ app = Flask(__name__)
 def home():
   return render_template(
       "index.html",
-      site_title="Your Tab Name",
-      heading="Your Main Title Here",  # <-- Put your title here!
+      site_title="TuneIn",
+      heading="Welcome to TuneIn",  # <-- Put your title here!
       status="Active",
-      description="Your subtitle or description goes here.",
+      description="Tune in is an app that will help you create study playlists",
       highlights=["First feature or service", "Second highlight", "Third point"],
   )
 
